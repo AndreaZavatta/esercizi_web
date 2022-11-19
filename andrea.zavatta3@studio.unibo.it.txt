@@ -1,0 +1,17 @@
+I tre standard alla base del web sono:
+HTML: HyperText Markup Language
+URI: Uniform Resource Identifier
+HTTP: HyperText Transfer Protocol
+
+HTML: è un linguaggio di markup che descrive le modalità di impaginazione o visualizzazione di documenti ipertestuali attraverso dei tag.
+Il browser cerca di interpretare il codice HTML, ma è buona pratica verificare che esso sia sempre valido attraverso dei validatori.
+Ci sono dei vantaggi nel mantenere il codice valido, ad esempio si può capire se ci sono errori e si ha la garanzia che il codice si adatti a nuovi browser.
+
+URI: è un indirizzo espresso attraverso una stringa di caratteri per identificare una risorsa in modo univoco.
+La risorsa in questione può essere un indirizzo web (url), un'immagine, un file, ...
+
+HTTP: è un protocollo usato per la trasmissione di informazioni sul web. 
+Fu pensato come un'architettura client-server: un server HTTP resta in attesa delle richieste da parte dei clients e risponde a queste ultime.
+E' importante proteggere il proprio sito con il protocollo HTTPS.
+In HTTP lo scambio di risorse tra client e server avviene in chiaro (non criptato), mentre in HTTPS la comunicazione è protetta tramite l'utilizzo di certificati.
+Oltre ad essere un fattore di sicurezza, Google ha deciso di inserire il protocollo HTTPS tra i fattori di ranking.
