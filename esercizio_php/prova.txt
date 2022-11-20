@@ -45,9 +45,9 @@ cambia i valori dell'insieme 4 sul database con:
 5 4
 6 4
 
-'A' => 3, 'B' => 4, O => 'u'
+'A' => 3, 'B' => 4, O => 'i'
 
-echo("Errore durante la creazione del nuovo insieme");
+echo("Intersezione vuota tra i due insiemi");
 
 
 'A' => 4, 'B' => 1, 'O' => 'u'

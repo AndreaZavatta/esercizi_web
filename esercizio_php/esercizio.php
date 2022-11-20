@@ -5,10 +5,9 @@
 </head>
 <body>
     <?php
-
     //bootstrap
     session_start();
-    $dbh = new mysqli("localhost", "root", "", "giugno", 3305);
+    $dbh = new mysqli("localhost", "root", "", "giugno", 3306);
     if ($dbh->connect_error) {
         die("Connection failed: " . $dbh->connect_error);
     }    
@@ -44,7 +43,7 @@
         $sql = "INSERT INTO insiemi (insieme, valore) VALUES (?, ?)";
         $stmt = $dbh->prepare($sql);
         foreach($arr as $value){
-            $stmt->bind_param('ii', $set, $value["valore"]);
+            $stmt->bind_param('ii', $set, $value);
             $stmt->execute();
         }
     }
@@ -63,6 +62,7 @@
         }
         return $result;
     }
+
     function getUnion($arr1, $arr2){
         $result = array();
         foreach($arr1 as $value){
@@ -100,13 +100,12 @@
     if(getMaxSet($dbh) == $maxSet+1){
         echo("E' stato creato il nuovo insieme " . ($maxSet+1) . " con i seguenti valori: <br/>");
         foreach($result as $value){
-            echo($value["valore"] . "<br/>");
+            echo($value . "<br/>");
         }
-    }else{
-        echo("Errore durante la creazione del nuovo insieme");
+    }else {
+        echo("Intersezione vuota tra i due insiemi");
     }
 
-    
     ?>
 </body>
 </html>
