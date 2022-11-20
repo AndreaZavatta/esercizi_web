@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Esercizio php</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
     <?php
+
     //bootstrap
     session_start();
     $dbh = new mysqli("localhost", "root", "", "giugno", 3306);
@@ -62,7 +64,6 @@
         }
         return $result;
     }
-
     function getUnion($arr1, $arr2){
         $result = array();
         foreach($arr1 as $value){
@@ -79,18 +80,11 @@
     //exercise
     if(!isset($_GET['A']) || !isset($_GET['B'])){
         echo("Inserire i parametri A e B");
-        die();
-    }
-    if(!isValidInput($dbh, $_GET['A']) || !isValidInput($dbh, $_GET['B'])){
+    } else if (!isValidInput($dbh, $_GET['A']) || !isValidInput($dbh, $_GET['B'])){
         echo("Le variabili A e B devono essere numeri maggiori di 0 e ci deve essere almeno un elemento appartenente agli insiemi in questione");
-        die();
-    }
-    
-    if(!isset($_GET['O']) || ($_GET['O'] != 'i' && $_GET['O'] != 'u')){
+    } else if (!isset($_GET['O']) || ($_GET['O'] != 'i' && $_GET['O'] != 'u')){
         echo("La variabilie O deve essere settata a u o ad i");
-        die();
-    }
-
+    } else {
     $firstArr = getNumbersFromSet($dbh, $_GET['A']);
     $secondArr = getNumbersFromSet($dbh, $_GET['B']);
     $result = $_GET['O'] == 'i' ? getIntersection($firstArr, $secondArr) : getUnion($firstArr, $secondArr);
@@ -102,10 +96,12 @@
         foreach($result as $value){
             echo($value . "<br/>");
         }
-    }else {
+    }else{
         echo("Intersezione vuota tra i due insiemi");
     }
+    }
 
+    
     ?>
 </body>
 </html>

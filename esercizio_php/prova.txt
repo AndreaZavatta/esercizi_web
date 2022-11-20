@@ -5,35 +5,35 @@
  1 2
 19 2
 
-'A'=> 1, 'O' => 'i'
+http://localhost/esercizio_php/esercizio.php?A=1&O=i
 
 echo("Inserire i parametri A e B")
 
-'B'=> 1, 'O' => 'u'
+http://localhost/esercizio_php/esercizio.php?B=1&O=u
 
 echo("Inserire i parametri A e B")
 
-'A' => -1, 'B'=> 2, 'O'=> 'u'
+http://localhost/esercizio_php/esercizio.php?A=-1&B=2&O=u
 
 echo("Le variabili A e B devono essere numeri maggiori di 0 e ci deve essere almeno un elemento appartenente agli insiemi in questione")
 
-'A' => 1, 'B' => 3, 'O' => 'i'
+http://localhost/esercizio_php/esercizio.php?A=1&B=3&O=i
 
 echo("Le variabili A e B devono essere numeri maggiori di 0 e ci deve essere almeno un elemento appartenente agli insiemi in questione")
 
-'A' => 1, 'B' => 2
+http://localhost/esercizio_php/esercizio.php?A=1&B=2
 
 echo("La variabilie O deve essere settata a u o ad i");
 
-'A' => 1, 'B' => 2 'O' => 'c'
+http://localhost/esercizio_php/esercizio.php?A=1&B=2&O=c
 
 echo("La variabilie O deve essere settata a u o ad i");
 
-'A' => 1, 'B'=> 2, 'O'=> 'i'
+http://localhost/esercizio_php/esercizio.php?A=1&B=2&O=i
 
 19 3
 
-'A' => 3, 'B'=>2, 'O' => 'u'
+http://localhost/esercizio_php/esercizio.php?A=3&B=2&O=u
 
 98 4
  1 4
@@ -45,12 +45,10 @@ cambia i valori dell'insieme 4 sul database con:
 5 4
 6 4
 
-'A' => 3, 'B' => 4, O => 'i'
-
+http://localhost/esercizio_php/esercizio.php?A=3&B=4&O=i
 echo("Intersezione vuota tra i due insiemi");
 
-
-'A' => 4, 'B' => 1, 'O' => 'u'
+http://localhost/esercizio_php/esercizio.php?A=4&B=1&O=u
  4 5
  5 5
  6 5
