@@ -1,0 +1,91 @@
+html{
+    font-family: monospace;
+    font-size: 100%;
+}
+
+header{
+    background-image: linear-gradient(to top left, purple,pink, yellow, pink);
+    margin: 1px 0 2px;
+    padding: 1% 1px;
+    border-bottom: 3px solid purple;
+    color: purple;
+    text-align: right;
+    width: 100%;
+}
+nav{
+    background-image: linear-gradient(to top left, purple,pink, yellow, pink);
+    width: 15%;
+    float:left;
+    border-top: 3px solid purple;
+    border-bottom: 3px solid purple;
+    margin: 1%;
+    padding-right: 1%;
+}
+nav ul{
+    line-height: 200%;
+    list-style: square;
+    text-align: left;
+}
+nav ul li a:hover{
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    padding: 1%;
+}
+nav:hover{
+    background-image: linear-gradient(to bottom right, purple,pink, yellow, pink);
+}
+aside{
+    width: 20%;
+    margin: 35px 30% 0 23%;
+}
+aside > p{
+    color: purple;
+}
+section{
+    margin: 20px 20px 15px 0;
+    width: 50%;
+    float:right;
+}
+section > p{
+    text-align: left;
+    color: black;
+}
+footer{
+    border-top: 3px solid purple;
+    clear: both;
+    background-image: linear-gradient(to top left, pink,yellow, pink, purple);
+    text-align: center;
+    padding: 1% 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+footer > p{
+    color: purple;
+    font-size: 80%;
+    text-align: center;
+    width: 100%;
+}
+/*
+    Questa parte non era richiesta, ma ho deciso di inserirla in quanto
+    il testo della nav a grandezza 600px usciva dal suo contenitore.
+*/
+@media only screen and (max-width: 600px) {
+    body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    nav, section, aside, footer, header{
+        width: 100%;
+        float: none;
+        margin:10px 0 0 0;
+        padding: 0px;
+    }
+    section,footer{
+        order:1;
+    }
+    nav{
+        position:sticky;
+        top:10px;  
+    }
+}
