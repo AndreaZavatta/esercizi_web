@@ -93,14 +93,20 @@
 
     $firstArr = getNumbersFromSet($dbh, $_GET['A']);
     $secondArr = getNumbersFromSet($dbh, $_GET['B']);
-    $result = $_GET['O'] == 'u' ? getIntersection($firstArr, $secondArr) : getUnion($firstArr, $secondArr);
+    $result = $_GET['O'] == 'i' ? getIntersection($firstArr, $secondArr) : getUnion($firstArr, $secondArr);
     $maxSet = getMaxSet($dbh);
+
     insertSetFromArray($dbh, $maxSet+1, $result);
-   
-    echo("E' stato creato il nuovo insieme " . ($maxSet+1) . " con i seguenti valori: <br/>");
-    foreach($result as $value){
-        echo($value["valore"] . "<br/>");
+    if(getMaxSet($dbh) == $maxSet+1){
+        echo("E' stato creato il nuovo insieme " . ($maxSet+1) . " con i seguenti valori: <br/>");
+        foreach($result as $value){
+            echo($value["valore"] . "<br/>");
+        }
+    }else{
+        echo("Errore durante la creazione del nuovo insieme");
     }
+
+    
     ?>
 </body>
 </html>
